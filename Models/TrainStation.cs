@@ -5,8 +5,8 @@ namespace away_railway.Models
   {
     public string Name { get; set; }
     public string Code { get; set; }
-    public Dictionary<string, TrainStation> Destinations { get; set; } = new Dictionary<string, TrainStation>();
-    public List<Passenger> Pickups { get; set; } = new List<Passenger>();
+    public Dictionary<string, TrainStation> Destinations { get; set; }
+    public List<Passenger> Pickups { get; set; }
 
     public void AddDestination(TrainStation des)
     {
@@ -15,12 +15,12 @@ namespace away_railway.Models
       des.Destinations.Add(Code, this);
     }
 
-    public TrainStation(string name, string code, Dictionary<string, TrainStation> destinations, List<Passenger> pickups)
+    public TrainStation(string name, string code)
     {
       Name = name;
       Code = code;
-      Destinations = destinations;
-      Pickups = pickups;
+      Destinations = new Dictionary<string, TrainStation>();
+      Pickups = new List<Passenger>();
     }
   }
 }
