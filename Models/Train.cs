@@ -40,6 +40,20 @@ namespace away_railway.Models
       Dallas.AddDestination(Houston);
       FortLauderdale.AddDestination(Miami);
 
+      //add passengers to train stations
+      Boise.Pickups.Add(new Passenger("SUN", 50));
+      Boise.Pickups.Add(new Passenger("DEN", 100));
+      Boise.Pickups.Add(new Passenger("DFW", 300));
+      Denver.Pickups.Add(new Passenger("PDX", 200));
+      Denver.Pickups.Add(new Passenger("PHX", 100));
+      Denver.Pickups.Add(new Passenger("FLA", 400));
+      LosAngeles.Pickups.Add(new Passenger("PDX", 200));
+      LosAngeles.Pickups.Add(new Passenger("MIA", 800));
+      Portland.Pickups.Add(new Passenger("BOI", 100));
+      Portland.Pickups.Add(new Passenger("SUN", 120));
+      FortLauderdale.Pickups.Add(new Passenger("MIA", 50));
+      Miami.Pickups.Add(new Passenger("PHX", 200));
+      Dallas.Pickups.Add(new Passenger("BOI", 300));
 
       CurrentTrainStation = Boise;
     }
