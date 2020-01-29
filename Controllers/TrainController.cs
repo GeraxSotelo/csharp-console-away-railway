@@ -14,7 +14,7 @@ namespace away_railway.Controllers
       while (_running)
       {
         PrintMessages();
-        // GetUserInput();
+        GetUserInput();
       }
       Console.Clear();
       Console.WriteLine("Watch your step");
@@ -22,7 +22,19 @@ namespace away_railway.Controllers
 
     private void GetUserInput()
     {
-      throw new NotImplementedException();
+      string input = Console.ReadLine().ToUpper();
+      switch (input)
+      {
+        case "Q":
+        case "QUIT":
+        case "EXIT":
+          _running = false;
+          break;
+        default:
+          Service.Travel(input);
+          Service.PrintTrips();
+          break;
+      }
     }
 
     private void PrintMessages()
