@@ -1,12 +1,15 @@
 ﻿using System;
+using away_railway.Controllers;
 
 namespace away_railway
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+      Console.Clear();
+      TrainController tc = new TrainController();
+      tc.Run();
     }
+  }
 }

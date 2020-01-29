@@ -7,7 +7,7 @@ namespace away_railway.Models
   {
     public TrainStation CurrentTrainStation { get; set; }
     public List<Passenger> Dropoffs { get; set; } = new List<Passenger>();
-    public double AccountBalance { get; set; } = 0.00;
+    public int AccountBalance { get; set; } = 0;
 
     private void Setup()
     {
@@ -58,7 +58,7 @@ namespace away_railway.Models
       CurrentTrainStation = Boise;
     }
 
-    public Train(TrainStation currentTrainStation, List<Passenger> dropoffs, double accountBalance)
+    public Train()
     {
       Setup();
     }
