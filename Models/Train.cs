@@ -54,6 +54,7 @@ namespace away_railway.Models
       FortLauderdale.Pickups.Add(new Passenger("MIA", 50));
       Miami.Pickups.Add(new Passenger("PHX", 200));
       Dallas.Pickups.Add(new Passenger("BOI", 300));
+      Houston.Pickups.Add(new Passenger("DEN", 500));
 
       CurrentTrainStation = Boise;
     }

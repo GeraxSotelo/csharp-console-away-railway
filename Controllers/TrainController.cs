@@ -10,6 +10,7 @@ namespace away_railway.Controllers
 
     public void Run()
     {
+      Service.Pickup();
       Service.PrintTrips();
       while (_running)
       {
@@ -17,7 +18,7 @@ namespace away_railway.Controllers
         GetUserInput();
       }
       Console.Clear();
-      Console.WriteLine("Watch your step");
+      Console.WriteLine("\nWatch your step");
     }
 
     private void GetUserInput()
@@ -29,6 +30,10 @@ namespace away_railway.Controllers
         case "QUIT":
         case "EXIT":
           _running = false;
+          break;
+        case "P":
+          Service.PassengersOnBoard();
+          PrintMessages();
           break;
         default:
           Service.Travel(input);
